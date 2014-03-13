@@ -28,12 +28,17 @@ public class AstarAI : MonoBehaviour {
         
         //Start a new path to the targetPosition, return the result to the OnPathComplete function
         seeker.StartPath (transform.position,targetPosition.position, OnPathComplete);
+		InvokeRepeating ("Recalculate", 1.5f, 1.5f);
+
     }
 
     public void Update() {
-        seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
+
     }
-    
+    void Recalculate()
+	{
+		seeker.StartPath (transform.position, targetPosition.position, OnPathComplete);
+	}
     public void OnPathComplete (Path p) {
         Debug.Log ("Yey, we got a path back. Did it have an error? "+p.error);
         if (!p.error) {
