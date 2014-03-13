@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class UseController : MonoBehaviour {
+public class EchoLocation : MonoBehaviour {
 	public int range;
 
 	// Update is called once per frame
@@ -11,7 +11,7 @@ public class UseController : MonoBehaviour {
     		RaycastHit hit = new RaycastHit();
     		if (Physics.Raycast (ray, out hit, range)) {
     	    	Debug.DrawLine (ray.origin, hit.point,Color.red,5f);
-				hit.collider.SendMessageUpwards("recieveRayCast",this.gameObject,SendMessageOptions.DontRequireReceiver);
+
     		}
 		}
 	}
