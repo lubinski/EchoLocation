@@ -22,6 +22,7 @@ public class EchoLocation : MonoBehaviour {
 				GameObject echo = Instantiate (soundPrefab) as GameObject;
 				echo.transform.position = hit.point;
 				echo.audio.PlayDelayed(rayVector.magnitude * delayFactor);
+				Destroy (echo,10);
     		}
 		}
 	}
