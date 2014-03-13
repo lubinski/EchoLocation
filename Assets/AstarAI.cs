@@ -5,7 +5,7 @@ using System.Collections;
 using Pathfinding;
 public class AstarAI : MonoBehaviour {
     //The point to move to
-    public Vector3 targetPosition;
+    public Transform targetPosition;
     
     private Seeker seeker;
     private CharacterController controller;
@@ -27,7 +27,11 @@ public class AstarAI : MonoBehaviour {
         controller = GetComponent<CharacterController>();
         
         //Start a new path to the targetPosition, return the result to the OnPathComplete function
-        seeker.StartPath (transform.position,targetPosition, OnPathComplete);
+        seeker.StartPath (transform.position,targetPosition.position, OnPathComplete);
+    }
+
+    public void Update() {
+        seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
     }
     
     public void OnPathComplete (Path p) {
