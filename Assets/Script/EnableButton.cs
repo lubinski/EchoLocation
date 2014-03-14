@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
-
-	public GameObject door;
+public class EnableButton : MonoBehaviour {
+	public GameObject button;
 
 	void OnTriggerEnter(Collider coll)
 	{
 		if (coll.gameObject.tag == "Player") {
-			door.audio.Play();
-			Destroy (door,2);
-			audio.pitch = 0.5f;
+			button.SetActive(true);
+			Destroy(gameObject);
 		}
 	}
 }
