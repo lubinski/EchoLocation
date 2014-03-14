@@ -9,7 +9,7 @@ public class EchoLocation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Interact")){
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			Ray ray = Camera.main.ViewportPointToRay (new Vector3(0.5f, 0.5f, 0f));
     		RaycastHit hit = new RaycastHit();
     		if (Physics.Raycast (ray, out hit, range)) {
     	    	Debug.DrawLine (ray.origin, hit.point,Color.red,5f);
