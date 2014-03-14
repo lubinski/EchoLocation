@@ -10,11 +10,12 @@ public class Ending : MonoBehaviour {
 			//Destroy (ending,3);
 			audio.pitch = 0.5f;
 			//Debug.Log("collided");
-			float wait = 0f;
-			while (wait < 10f) {
-				wait = Time.deltaTime + wait;
-			}
-			Application.Quit();
+			Invoke("EndGame", 10);
 		}
+	}
+
+	void EndGame() {
+		Application.Quit();
+		Debug.Log("QUIT");
 	}
 }

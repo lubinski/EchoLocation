@@ -8,8 +8,10 @@ public class Button : MonoBehaviour {
 	void OnTriggerEnter(Collider coll)
 	{
 		if (coll.gameObject.tag == "Player") {
-			door.audio.Play();
-			Destroy (door,2);
+			if(door) {
+				door.audio.Play();
+				Destroy (door,2);
+			}
 			audio.pitch = 0.5f;
 		}
 	}
