@@ -9,6 +9,7 @@ public class Button : MonoBehaviour {
 			GameObject door = transform.parent.FindChild("door").gameObject;
 			door.audio.Play();
 			Destroy (door,2);
+			audio.pitch = 0.5f;
 		}
 	}
 }
