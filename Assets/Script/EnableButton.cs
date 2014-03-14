@@ -8,6 +8,7 @@ public class EnableButton : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player") {
 			button.SetActive(true);
+			button.audio.Play();
 			Destroy(gameObject);
 		}
 	}
