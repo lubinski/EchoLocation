@@ -7,3 +7,5 @@ http://www.freesound.org/people/Kijadzel/sounds/170608/ - beep1
 http://www.freesound.org/people/primeval_polypod/sounds/156509/ - door1
 http://www.freesound.org/people/DJ%20Chronos/sounds/130293/ - pipe_hiss
 http://www.freesound.org/people/geoneo0/sounds/193812/ - whisper
+http://www.freesound.org/people/Walter_Odington/sounds/26794/ - pipe_vibrate
+http://www.freesound.org/people/CGEffex/sounds/89601/ - piano
